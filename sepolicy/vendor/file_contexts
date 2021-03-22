@@ -106,3 +106,6 @@
 /sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wma/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_wmapro/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+
+# QS Sys UI Info
+/sys/kernel/gpu(/.*)?                                                                                                                             u:object_r:sysfs_info:s0

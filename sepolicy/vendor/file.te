@@ -26,3 +26,6 @@ type vendor_sysfs_video_call_on, fs_type, sysfs_type;
 
 # FPS Info
 type sysfs_fps, sysfs_type, fs_type;
+
+# QS SystemUI Info
+type sysfs_info, fs_type, sysfs_type;
