@@ -77,6 +77,9 @@
 /dev/socket/oemlogkit        u:object_r:oemlogkit_socket:s0
 /dev/socket/ramboost         u:object_r:ramboost_socket:s0
 
+# FPS Info
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps                              u:object_r:sysfs_fps:s0
+
 # Sys files
 /sys/module/fsc(/.*)?      u:object_r:sysfs_fsc:s0
 /sys/module/fuse(/.*)?     u:object_r:sysfs_fuse:s0
