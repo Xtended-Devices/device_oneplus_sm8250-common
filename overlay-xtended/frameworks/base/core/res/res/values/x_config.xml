@@ -35,6 +35,9 @@
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">false</bool>
 
+     <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
     <!-- Do the battery/notification LEDs support pulsing?
          Used to decide if we show pulse settings -->
     <bool name="config_ledCanPulse">false</bool>
