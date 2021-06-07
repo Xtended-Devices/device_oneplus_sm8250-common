@@ -14,12 +14,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
-        <item>/system/priv-app/KeyHandler/KeyHandler.apk</item>
+        <item>/system/priv-app/DeviceSettings/DeviceSettings.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>org.xtended.settings.device.KeyHandler</item>
+        <item>org.xtended.device.DeviceSettings.KeyHandler</item>
     </string-array>
 
     <!-- Whether device has warp charging support -->     

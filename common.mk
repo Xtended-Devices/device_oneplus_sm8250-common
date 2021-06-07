@@ -244,6 +244,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/misc/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     $(LOCAL_PATH)/configs/misc/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
 
+# DeviceSettings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -464,7 +468,6 @@ PRODUCT_COPY_FILES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon
 
 # Update engine
