@@ -2,3 +2,5 @@ hal_client_domain(hal_lineage_fod_default, hal_display)
 hal_client_domain(hal_lineage_fod_default, hal_fingerprint)
 
 allow hal_lineage_fod_default sysfs_fod:file rw_file_perms;
+
+add_hwservice(hal_lineage_fod_default, hal_lineage_fod_hwservice)
