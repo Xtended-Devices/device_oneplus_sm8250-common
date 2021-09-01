@@ -286,6 +286,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
+#FOD animations
+EXTRA_FOD_ANIMATIONS := true
+TARGET_HAS_FOD := true
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
