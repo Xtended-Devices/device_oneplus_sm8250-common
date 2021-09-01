@@ -27,6 +27,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
+    <protected-broadcast android:name="org.xtended.device.DeviceSettings.UPDATE_SETTINGS" />
+
     <uses-sdk
         android:minSdkVersion="28"
         android:targetSdkVersion="29" />
@@ -66,6 +68,12 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".TouchscreenGestureSettings"
+            android:label="@string/touchscreen_gesture_settings_title"
+            android:theme="@style/AppTheme">
+        </activity>
 
         <!-- DeviceSettings Tile -->
         <service

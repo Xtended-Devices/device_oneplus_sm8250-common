@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.xtended.settings.device;
+package org.xtended.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
