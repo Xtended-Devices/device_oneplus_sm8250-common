@@ -51,6 +51,7 @@ import androidx.preference.TwoStatePreference;
 
 import org.xtended.device.DeviceSettings.FileUtils;
 import org.xtended.device.DeviceSettings.FPSInfoService;
+import org.xtended.device.DeviceSettings.DolbySwitch;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -68,11 +69,13 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
     private static final String PREF_DOZE = "advanced_doze_settings";
+    private static final String KEY_ENABLE_DOLBY_ATMOS = "enable_dolby_atmos";
 
     private static final String FILE_LEVEL = "/sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level";
     private static final long testVibrationPattern[] = {0,50};
     public static final String DEFAULT = "3";
 
+    private DolbySwitch mDolbySwitch;
     private static SwitchPreference mFpsInfo;
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
@@ -81,7 +84,7 @@ public class DeviceSettings extends PreferenceFragment
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mMuteMedia;
-
+    private static TwoStatePreference mEnableDolbyAtmos;
     private ProperSeekBarPreference mVibratorStrengthPreference;
     private ProperSeekBarPreference mFpsInfoTextSizePreference;
 
@@ -144,6 +147,12 @@ public class DeviceSettings extends PreferenceFragment
         mMuteMedia.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_MUTE_MEDIA, false));
         mMuteMedia.setOnPreferenceChangeListener(this);
 
+        // Dolby
+        mDolbySwitch = new DolbySwitch(this.getContext());
+        mEnableDolbyAtmos = (TwoStatePreference) findPreference(KEY_ENABLE_DOLBY_ATMOS);
+        mEnableDolbyAtmos.setChecked(mDolbySwitch.isCurrentlyEnabled());
+        mEnableDolbyAtmos.setOnPreferenceChangeListener(this);
+
         mVibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
@@ -176,6 +185,8 @@ public class DeviceSettings extends PreferenceFragment
             } else {
                 this.getContext().stopService(fpsinfo);
             }
+        } else if (preference == mEnableDolbyAtmos) {
+            mDolbySwitch.setEnabled((Boolean) newValue);
         } else if (preference == mFpsInfoPosition) {
             int position = Integer.parseInt(newValue.toString());
             Context mContext = getContext();

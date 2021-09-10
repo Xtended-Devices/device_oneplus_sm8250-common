@@ -91,6 +91,18 @@
             </intent-filter>
         </service>
 
+        <!-- Dolby Tile -->
+        <service
+            android:name="org.xtended.device.DeviceSettings.DolbyTileService"
+            android:icon="@drawable/ic_dolby_atmos"
+            android:label="@string/enable_dolby_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+       
         <!-- HBM Tile -->
         <service
             android:name="org.xtended.device.DeviceSettings.HBMModeTileService"
