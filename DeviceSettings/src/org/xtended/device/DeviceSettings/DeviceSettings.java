@@ -57,6 +57,7 @@ public class DeviceSettings extends PreferenceFragment
 
     public static final String KEY_DC_SWITCH = "dc";
     public static final String KEY_HBM_SWITCH = "hbm";
+    public static final String KEY_GAME_SWITCH = "game_mode";
     public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
     public static final String KEY_FPS_INFO = "fps_info";
@@ -76,6 +77,7 @@ public class DeviceSettings extends PreferenceFragment
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mFpsInfoColor;
     private static TwoStatePreference mDCModeSwitch;
+    private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
     private static TwoStatePreference mMuteMedia;
@@ -126,6 +128,12 @@ public class DeviceSettings extends PreferenceFragment
 
         mFpsInfoTextSizePreference = (ProperSeekBarPreference) findPreference(KEY_FPS_INFO_TEXT_SIZE);
         mFpsInfoTextSizePreference.setOnPreferenceChangeListener(this);
+
+        // GameMode
+        mGameModeSwitch = (TwoStatePreference) findPreference(KEY_GAME_SWITCH);
+        mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
+        mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
 
         mMuteMedia = (TwoStatePreference) findPreference(KEY_MUTE_MEDIA);
         mMuteMedia.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_MUTE_MEDIA, false));

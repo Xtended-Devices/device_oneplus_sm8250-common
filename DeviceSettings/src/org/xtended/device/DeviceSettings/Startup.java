@@ -49,6 +49,10 @@ public class Startup extends BroadcastReceiver {
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_FPS_INFO, false);
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_GAME_SWITCH, false);
+        if (enabled) {
+        restore(GameModeSwitch.getFile(), enabled);
+               }
        }
         DeviceSettings.restoreVibStrengthSetting(context);
     }

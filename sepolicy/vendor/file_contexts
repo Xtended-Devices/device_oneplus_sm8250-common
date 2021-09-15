@@ -216,3 +216,6 @@
 
 # Vibrator
 /sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level                     u:object_r:sysfs_vibrator:s0
+
+# Proc files (DeviceSettings)
+/proc/touchpanel/force_game_switch_enable    u:object_r:proc_touchpanel:s0

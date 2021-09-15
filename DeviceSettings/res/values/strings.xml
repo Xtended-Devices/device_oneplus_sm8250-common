@@ -101,4 +101,10 @@
     <string name="category_vibrator">Vibrator</string>
     <string name="vib_strength_title_head">Strength</string>
     <string name="vib_strength_summary_head">Define the strength of the vibrator</string>
+
+    <!-- Touchscreen -->
+    <string name="touchscreen_title">Touchscreen</string>
+    <string name="game_mode_title">Game Mode</string>
+    <string name="game_mode_summary">Force enable 240Hz sampling rate for all applications</string>
+    <string name="game_mode_warning">May decrease battery life</string>
 </resources>
