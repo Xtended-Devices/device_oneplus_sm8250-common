@@ -29,5 +29,11 @@
 
     <!-- Disable Battery health services as It's enable by default in our sources  -->
     <bool name="config_supportBatteryHealth">false</bool>
+   
+    <!-- Defines custom pickup sensor used by various OEMs e.g., OnePlus, MemeUI, etc-->
+    <string name="pickup_sensor" translatable="false">oneplus.sensor.op_motion_detect</string>
+
+    <!-- Defines the custom tilt sensor used by various OEMs like OnePlus-->
+    <string name="config_custom_tilt">oneplus.sensor.op_motion_detect</string>
 
 </resources>
