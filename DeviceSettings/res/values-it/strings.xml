@@ -32,6 +32,12 @@
     <string name="tile_hbm_mode">Alta luminosità</string>
     <string name="dc_mode_summary">Diminuisci la retroilluminazione regolando la corrente CC disegnata sul display</string>
     <string name="dc_mode_title">DC Dimming automatico</string>
+    <!-- Dolby -->
+    <string name="dolby_category">Dolby</string>
+    <string name="enable_dolby_title">Dolby Atmos</string>
+    <string name="enable_dolby_summary">Switching requires a reboot to take effect</string>
+    <string name="dolby_title">Configurazione</string>
+    <string name="dolby_summary">Configura l\'uscita audio in base al contenuto multimediale</string>
     <!-- FPS Info -->
     <string name="fps_title">Info FPS</string>
     <string name="fps_info_title">FPS overlay</string>
