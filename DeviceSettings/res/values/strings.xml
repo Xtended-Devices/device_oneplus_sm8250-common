@@ -97,6 +97,9 @@
     <string name="fps_info_position_bottom_right">Bottom right</string>
     <string name="fps_info_text_size_title">Text Size</string>
 
+    <!-- Unsupported feature -->
+    <string name="unsupported_feature">This feature is unavailable on current kernel</string>
+
     <!-- Vibration Strength -->
     <string name="category_vibrator">Vibrator</string>
     <string name="vib_strength_title_head">Strength</string>

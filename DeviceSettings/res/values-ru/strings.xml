@@ -51,6 +51,8 @@
     <string name="fps_info_position_bottom_center">Bottom center</string>
     <string name="fps_info_position_bottom_right">Bottom right</string>
     <string name="fps_info_text_size_title">Размер текста</string>
+    <!-- Unsupported feature -->
+    <string name="unsupported_feature">Эта функция недоступна в текущем ядре</string>
     <!-- Vibration Strength -->
     <string name="category_vibrator">Вибрация</string>
     <string name="vib_strength_title_head">Сила</string>

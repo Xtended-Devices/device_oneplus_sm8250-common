@@ -51,6 +51,8 @@
     <string name="fps_info_position_bottom_center">Bottom center</string>
     <string name="fps_info_position_bottom_right">Bottom right</string>
     <string name="fps_info_text_size_title">Dimensione del testo</string>
+    <!-- Unsupported feature -->
+    <string name="unsupported_feature">Questa funzione non è disponibile nel kernel corrente</string>
     <!-- Vibration Strength -->
     <string name="category_vibrator">Vibrazione</string>
     <string name="vib_strength_title_head">Intensità</string>
