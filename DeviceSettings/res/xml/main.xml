@@ -32,16 +32,6 @@
         android:key="graphics"
         android:title="@string/display_title">
 
-    <Preference
-            android:key="dc_dim"
-            android:enabled="true"
-            android:icon="@drawable/ic_dc_mode"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title">
-            <intent
-                    android:action="android.settings.DC_DIMMING_SETTINGS" /> 
-     </Preference>
-
         <SwitchPreference
             android:key="dc"
             android:icon="@drawable/ic_dc_mode"
@@ -106,23 +96,6 @@
             android:min="1"
             settings:units=""
             android:defaultValue="3" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="gestures"
-        android:title="@string/screen_gestures_panel_title">
-
-        <Preference
-            android:key="touchscreen_gesture_settings"
-            android:icon="@drawable/ic_gestures_icon"
-            android:persistent="false"
-            android:title="@string/touchscreen_gesture_settings_title"
-            android:summary="@string/touchscreen_gesture_settings_summary">
-            <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.touch.gestures"
-                    android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
-        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
