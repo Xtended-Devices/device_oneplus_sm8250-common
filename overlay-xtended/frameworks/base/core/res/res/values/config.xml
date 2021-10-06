@@ -61,4 +61,7 @@
          and on the navigation bar and disabled for all other devices. -->
     <bool name="config_statusBarBurnInProtection">true</bool>
 
+    <!-- Defines the sysfs attribute path used by the device to enable/disable DC dimming. -->
+    <string name="config_deviceDcDimmingSysfsNode">/sys/class/drm/card0-DSI-1/dimlayer_bl_en</string>
+
 </resources>

@@ -32,11 +32,15 @@
         android:key="graphics"
         android:title="@string/display_title">
 
-        <SwitchPreference
-            android:key="dc"
+         <Preference
+            android:key="dc_dim"
+            android:enabled="true"
             android:icon="@drawable/ic_dc_mode"
             android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
+            android:title="@string/dc_mode_title">
+            <intent
+                    android:action="android.settings.DC_DIMMING_SETTINGS" /> 
+         </Preference>
 
         <SwitchPreference
             android:key="auto_hbm"
