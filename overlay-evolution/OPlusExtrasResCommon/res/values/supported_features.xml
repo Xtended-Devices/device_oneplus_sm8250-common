@@ -9,7 +9,7 @@
     <bool name="config_deviceSupportsAlertSlider">true</bool>
 
     <!-- Whether device supports Per-App Refresh Rate -->
-    <bool name="config_deviceSupportsPerAppRefreshRate">true</bool>
+    <bool name="config_deviceSupportsPerAppRefreshRate">false</bool>
 
     <!-- Whether device supports Kcal -->
     <bool name="config_deviceSupportsKcal">true</bool>
